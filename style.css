@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+body {
+  background-image: linear-gradient(to right bottom, rgb(255, 214, 241), pink);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.main {
+  max-width: 85%;
+  margin: 50px auto;
+  position: relative;
+}
+
+.main h1 {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: palevioletred;
+  font-size: 44px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 0 palevioletred;
+}
+
+.main .show-form-btn {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.show-form-button{
+  cursor: pointer;
+  display: block;
+  margin: 40px auto;
+  padding: 25px 50px;
+  font-size: 24px;
+  font-weight: 600;
+  background-color: white;
+  color: palevioletred;
+  box-shadow: 4px 4px 0 0 rgb(251, 169, 196);
+  border: palevioletred 2px solid;
+  border-radius: 10px;
+
+}
+
+.questionnaire-container {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: none;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.questionnaire-container-empty {
+  display: block;
+}
+
+.questionnaire-item {
+  display: block;
+  border: rgb(110, 49, 110) 2px solid;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 20px;
+}
+
+.questionnaire-item span {
+  display: block;
+  color: rgb(110, 49, 110);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.questionnaire-item {
+  display: block;
+  position: relative;
+}
+
+.questionnaire-item .close-button {
+  cursor: pointer;
+  position: absolute;
+  right: 5%;
+  top: 13%;
+  padding: 5px 10px;
+  border: none;
+  background-color: transparent;
+  color: rgb(110, 49, 110);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.add-questionnaire-form {
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.add-questionnaire-form form {
+  background-color: white;
+  padding: 20px 80px;
+  border-radius: 10px;
+  box-shadow: 6px 6px 0 0 palevioletred;
+}
+
+.add-questionnaire-form .close-button {
+  cursor: pointer;
+  position: fixed;
+  right: 5%;
+  padding: 5px 10px;
+  border: none;
+  background-color: transparent;
+  color: rgb(110, 49, 110);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.add-questionnaire-form h2 {
+  text-align: center;
+  font-size: 30px;
+  margin: 20px 0 30px 0;
+  color: rgb(110, 49, 110);
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: palevioletred;
+}
+
+.add-questionnaire-form label {
+  font-weight: 700;
+  color: palevioletred;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  width: 460px;
+}
+
+.add-questionnaire-form input {
+  width: 270px;
+  border-bottom: 4px palevioletred dotted;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(110, 49, 110);
+  transition: 400ms;
+}
+
+.add-questionnaire-form input:focus {
+  border-bottom: 4px palevioletred dotted;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+}
+
+.add-questionnaire-form label input:focus{
+  transform: scale(1.05);
+}
+
+.add-questionnaire-form .add-questionnaire-button {
+  cursor: pointer;
+  display: block;
+  margin: 40px auto;
+  padding: 20px 40px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: white;
+  color: rgb(110, 49, 110);
+  box-shadow: 4px 4px 0 0 rgb(251, 169, 196);
+  border: rgb(110, 49, 110) 2px solid;
+  border-radius: 10px;
+}
+
+.add-questionnaire-form .add-questionnaire-button:active {
+  transform: scale(0.95);
+}
+
+.modal{
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: none;
+  background-color: rgba(90, 15, 61, 0.528);
+}
+
