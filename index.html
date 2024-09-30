@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>QUESTIONNAIRE</title>
+    <script src="load.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="header__title">АНКЕТА ДЛЯ ДРУЗЕЙ</h1>
+        <button
+          type="button"
+          class="header__show-form-button"
+          id="show-form-button-id"
+        >
+          ЗАПОЛНИТЬ АНКЕТУ
+        </button>
+      </header>
+      <main class="main">
+        <h3 class="main__questionnaire-title">СПИСОК ВСЕХ АНКЕТ</h3>
+        <span class="main__questionnaire-empty">ПОКА АНКЕТ НЕТ</span>
+        <section class="main__questionnaire-container"></section>
+      </main>
+      <div class="modal modal--hidden"></div>
+      <div class="form form--hidden">
+        <form action="" class="form__content">
+          <div class="form__header">
+            <h2 class="form__title">МОЯ АНКЕТА</h2>
+            <button
+              class="form__close-button"
+              id="close-form-button"
+              type="button"
+            >
+              X
+            </button>
+          </div>
+          <div class="form__input-container">
+            <label for="name-id" class="form__label">
+              ТВОЁ ИМЯ
+              <input
+                type="text"
+                id="name-id"
+                name="name"
+                data-text="ТВОЁ ИМЯ"
+                maxlength="20"
+                required
+                class="form__input"
+              />
+            </label>
+            <label for="last-name-id" class="form__label">
+              ТВОЯ ФАМИЛИЯ
+              <input
+                type="text"
+                id="last-name-id"
+                name="last-name"
+                data-text="ТВОЯ ФАМИЛИЯ"
+                maxlength="20"
+                required
+                class="form__input"
+              />
+            </label>
+            <label for="birthday-id" class="form__label">
+              ДЕНЬ РОЖДЕНИЯ
+              <input
+                type="date"
+                id="birthday-id"
+                name="birthday"
+                data-text="ДЕНЬ РОЖДЕНИЯ"
+                required
+                class="form__input"
+              />
+            </label>
+          </div>
+          <div class="form__buttons">
+            <button
+              id="add-question-button"
+              type="button"
+              class="form__add-question-button"
+            >
+              НОВЫЙ ВОПРОС
+            </button>
+            <button
+              type="submit"
+              class="form__add-questionnaire-button"
+              id="add-questionnaire-button-id"
+            >
+              СОХРАНИТЬ
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
